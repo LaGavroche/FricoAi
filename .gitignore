@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+vegetable-classifier-clean/node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# Uploads (images temporaires)
+uploads/*
+!uploads/.gitkeep
+
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

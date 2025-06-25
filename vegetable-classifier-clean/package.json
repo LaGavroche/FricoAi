@@ -1,0 +1,53 @@
+{
+  "name": "@frico/vegetable-classifier",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Classificateur de légumes avec TensorFlow.js - Version propre",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "files": [
+    "src/",
+    "models/",
+    "examples/"
+  ],
+  "scripts": {
+    "start": "node examples/node-example.js",
+    "dev": "node --watch examples/node-example.js",
+    "test": "node examples/node-example.js",
+    "test-model": "node -e \"import('./examples/node-example.js')\"",
+    "build": "echo 'Build script à configurer avec Rollup si besoin'"
+  },
+  "keywords": [
+    "tensorflow",
+    "machine-learning",
+    "image-classification",
+    "vegetables",
+    "teachable-machine",
+    "frico",
+    "ai",
+    "computer-vision"
+  ],
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.22.0",
+    "@tensorflow/tfjs-backend-cpu": "^4.22.0",
+    "sharp": "^0.34.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "author": "Rayan - Frico",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frico/vegetable-classifier.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "types": "./src/index.d.ts"
+    }
+  }
+}
