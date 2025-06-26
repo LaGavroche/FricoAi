@@ -61,6 +61,30 @@ const vegetableRecognitionSchema = new mongoose.Schema({
   isReliable: {
     type: Boolean,
     required: true
+  },
+  
+  // Type de détection (single ou multiple)
+  detectionType: {
+    type: String,
+    enum: ['single', 'multiple'],
+    default: 'single'
+  },
+  
+  // Légumes détectés (pour détection multiple)
+  detectedVegetables: [{
+    name: String,
+    displayName: String,
+    confidence: Number,
+    positions: [String],
+    detectionMethod: String
+  }],
+  
+  // Statistiques détection multiple
+  multiDetectionStats: {
+    totalVegetables: Number,
+    uniqueTypes: Number,
+    overallConfidence: Number,
+    zonesAnalyzed: Number
   }
 }, {
   timestamps: true, // Ajoute createdAt et updatedAt automatiquement
